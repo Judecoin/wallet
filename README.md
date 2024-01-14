@@ -7,12 +7,12 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
 
 <img src="https://github.com/Judecoin/wallet/assets/79756583/2ecf5d80-8ae6-4c26-b32b-6fdf5a07a607" width="60px">[Version1.4.5](https://www.judecoin.io/storage/files/android/judecoin-release-v1.4.5.apk)
 
-<img src="https://github.com/Judecoin/wallet/assets/79756583/f1adc946-6ed4-48da-b984-984ae48e4c47" width="60px">[Version1.1.3](https://testflight.apple.com/join/4Cqg8Ihk)
+<img src="https://github.com/Judecoin/wallet/assets/79756583/f1adc946-6ed4-48da-b984-984ae48e4c47" width="60px">[Version1.4.3](https://testflight.apple.com/join/4Cqg8Ihk)
 
 ## Feature List
 
 Highlights include:
-- 7 Different cryptocurrencies:
+- 8 Different cryptocurrencies:
     - [Judecoin](https://www.judecoin.io/)
     - [Bitcoin](https://bitcoin.org/en/)
     - [Ethereum](https://ethereum.org/en/)
