@@ -5,14 +5,14 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
 
 <img src="https://github.com/Judecoin/wallet/assets/79756583/63f6f982-9319-4222-bf4e-87aa19ea6533" width="53px">[Windows 64-bit 0.2.1.2（Multifunction）](https://www.judecoin.io/storage/files/win/judecoin-gui-win-x64-v0.2.1.2.zip)
 
-<img src="https://github.com/Judecoin/wallet/assets/79756583/2ecf5d80-8ae6-4c26-b32b-6fdf5a07a607" width="60px">[Version1.4.5](https://www.judecoin.io/storage/files/android/judecoin-release-v1.4.5.apk)
+<img src="https://github.com/Judecoin/wallet/assets/79756583/2ecf5d80-8ae6-4c26-b32b-6fdf5a07a607" width="60px">[Version1.4.6](https://www.judecoin.io/storage/files/android/judecoin-release-v1.4.6.apk)
 
 <img src="https://github.com/Judecoin/wallet/assets/79756583/f1adc946-6ed4-48da-b984-984ae48e4c47" width="60px">[Version1.4.3](https://testflight.apple.com/join/4Cqg8Ihk)
 
 ## Feature List
 
 Highlights include:
-- 8 Different cryptocurrencies:
+- 9 Different cryptocurrencies:
     - [Judecoin](https://www.judecoin.io/)
     - [Bitcoin](https://bitcoin.org/en/)
     - [Ethereum](https://ethereum.org/en/)
@@ -21,6 +21,7 @@ Highlights include:
     - [Dogecoin](https://dogecoin.com/)
     - [Solana](https://solana.com/)
     - [Litecoin](https://litecoin.org/)
+    - [Avalanche](https://www.avax.network/)
 - All private keys and seeds stay on device and are never shared.
 - Easy backup and restore feature to save all the information that's important to you.
 - Custom address book
