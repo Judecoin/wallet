@@ -17,8 +17,9 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
 </a>
 
 <a href="https://testflight.apple.com/join/4Cqg8Ihk">
-    <img src="https://github.com/Judecoin/wallet/assets/79756583/866b1f8c-b70b-4de4-8b11-db3b59b1df49" width="160px" height="68px" />
+    <img src="https://github.com/Judecoin/wallet/assets/79756583/41b55451-4c49-473b-b0a7-9214ed94dbec" width="160px" height="68px" />
 </a>
+
 
 ## Feature List
 
