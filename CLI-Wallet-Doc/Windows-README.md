@@ -28,7 +28,7 @@ Now the daemon is synced we can run the judecoin-wallet-cli file.
 
 # Step 2: Setting up your judecoin-wallet-cli account.
 
-If this is your first time opening the judecoin-wallet-cli it will request for you to specify a wallet name. For the purposes of this user guide we will use the example name MyWallet
+If this is your first time opening the judecoin-wallet-cli it will request for you to specify a wallet name. For the purposes of this user guide we will use the example name MyWallet. Run command:  .\judecoin-wallet-cli.exe  --use-english-language-names
 
 ```
 Specify wallet file name (e.g., MyWallet). If the wallet doesn't exist, it will be created.
