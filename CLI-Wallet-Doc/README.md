@@ -45,18 +45,11 @@ No wallet found with that name. Confirm creation of new wallet named: MyWallet
 ```
 The jude-wallet-cli has now generated us a wallet called MyWallet and is now prompting us for a password for our generated wallet.
 
-<table>
-Please note:
-    <tr>
-        When typing the password, the characters will not appear. It will seem as if you are typing and no text is appearing however the terminal is logging every character your clicking including if it is capitalised or lowercase.
-    </tr>
-    <tr>
-        Write down your wallet name and password on a piece of paper as this information will be required every time we want to enter our wallet.
-    </tr>
-    <tr>
-        Use a password with uppercase letters, lowercase letters, numbers, symbols and make the password at least 9 characters long.
-    </tr>
-</table>
+#### Please note:
+- When typing the password, the characters will not appear. It will seem as if you are typing and no text is appearing however the terminal is logging every character your clicking including if it is capitalised or lowercase.
+- Write down your wallet name and password on a piece of paper as this information will be required every time we want to enter our wallet.
+- Use a password with uppercase letters, lowercase letters, numbers, symbols and make the password at least 9 characters long.
+
 ```
 Generating new wallet...
 
