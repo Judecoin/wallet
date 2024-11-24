@@ -7,7 +7,7 @@ Before following the guide below, you'll need to download the CLI Wallet for Lin
 
 # Step 1: Opening judecoin-wallet-cli and judecoind.
 
-To use the judecoin-wallet-cli we must first have the daemon, judecoind, up and running. The judecoind is your node which the jude-wallet-cli broadcasts through. Without the node running the jude-wallet-cli will not be able to operate.
+To use the judecoin-wallet-cli we must first have the daemon, judecoind, up and running. The judecoind is your node which the judecoin-wallet-cli broadcasts through. Without the node running the judecoin-wallet-cli will not be able to operate.
 
 Open up the judecoind file in the folder you extracted the release from. 
 
@@ -23,12 +23,12 @@ Use the "help" command to see the list of available commands.
 **********************************************************************
 ```
 
-Now the daemon is synced we can run the jude-wallet-cli file.
+Now the daemon is synced we can run the judecoin-wallet-cli file.
 
 
-# Step 2: Setting up your jude-wallet-cli account.
+# Step 2: Setting up your judecoin-wallet-cli account.
 
-If this is your first time opening the jude-wallet-cli it will request for you to specify a wallet name. For the purposes of this user guide we will use the example name MyWallet
+If this is your first time opening the judecoin-wallet-cli it will request for you to specify a wallet name. For the purposes of this user guide we will use the example name MyWallet
 
 ```
 Specify wallet file name (e.g., MyWallet). If the wallet doesn't exist, it will be created.
@@ -43,7 +43,7 @@ No wallet found with that name. Confirm creation of new wallet named: MyWallet
 
 (Y/Yes/N/No): Yes
 ```
-The jude-wallet-cli has now generated us a wallet called MyWallet and is now prompting us for a password for our generated wallet.
+The judecoin-wallet-cli has now generated us a wallet called MyWallet and is now prompting us for a password for our generated wallet.
 
 #### Please note:
 - When typing the password, the characters will not appear. It will seem as if you are typing and no text is appearing however the terminal is logging every character your clicking including if it is capitalised or lowercase.
@@ -77,7 +77,7 @@ If your display freezes, exit blind with ^C, then run again with --use-english-l
 Enter the number corresponding to the language of your choice: 1
 ```
 
-The jude-wallet-cli will generate and spit out several lines of text. Some of the information that was outputted will only ever show once, therefore it is very important to do this next section properly otherwise we may lose access to our account, thus losing access to our funds.
+The judecoin-wallet-cli will generate and spit out several lines of text. Some of the information that was outputted will only ever show once, therefore it is very important to do this next section properly otherwise we may lose access to our account, thus losing access to our funds.
 
 Let’s take a close look at each section of the newly generated wallet:
 
@@ -95,7 +95,7 @@ The View key address is not to be shared unless you want to show the transaction
 View key: fd370cd118cf846df807c873016b9c24d9c75fdae44c64c92c253c3e03041206
 ```
 
-The next few lines of text show how to navigate the jude-wallet-client.
+The next few lines of text show how to navigate the judecoin-wallet-client.
 ```
 **********************************************************************
 Your wallet has been generated!
