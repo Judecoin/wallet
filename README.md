@@ -38,7 +38,7 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
 ## Feature List
 
 Highlights include:
-- 11 Different cryptocurrencies:
+- 12 Different cryptocurrencies:
     - [Judecoin](https://www.judecoin.io/)
     - [Bitcoin](https://bitcoin.org/en/)
     - [Ethereum](https://ethereum.org/en/)
