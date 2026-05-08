@@ -1,6 +1,6 @@
 # Full service node setup 
 
-#### Running an Judecoin Service Node: Requirements
+#### Running a Judecoin Service Node: Requirements
 
 These are the current basic requirements for running a Service Node.
 
@@ -30,14 +30,14 @@ If you are using a firewall then ensure that the following ports are open/reacha
 
 
 
-#### 2.1 Install judeocin released binaries 
+#### 2.1 Install Judecoin released binaries 
 
 ```
-wget https://www.judecoin.io/storage/files/cli/judecoin-linux-x64-v3.0.0.tar.bz2
+wget https://www.judecoin.io/storage/files/cli/judecoin-linux-x64-v3.1.2.tar.bz2
 
-tar -jxvf judecoin-linux-x64-v3.0.0.tar.bz2
+tar -jxvf judecoin-linux-x64-v3.1.2.tar.bz2
 
-cd judeocin-x86_64-linux-gun-v3.0.0
+cd judecoin-x86_64-linux-gnu-v3.1.2
 ```
 
 ##### Check version information
@@ -46,9 +46,9 @@ cd judeocin-x86_64-linux-gun-v3.0.0
 ./judecoind --version
 ```
 
-#### 2.2 RUN judeocind with service node mode
+#### 2.2 RUN judecoind with service node mode
 
-There are two recommended ways to run the judeocin node: 
+There are two recommended ways to run the judecoin node: 
 
 1. Directly run it as a daemon process via command-line parameters (Step 2.3).
 2.  Run it as a system service (Step 2.4).
@@ -58,7 +58,7 @@ There are two recommended ways to run the judeocin node:
 #### 2.3 Run as daemon via console
 
 ```bash
-./judecoind --service-node --service-node-public-ip <YOUR_SERVER_PUBLIC_IP> --no-zmq --	detach
+./judecoind --service-node --service-node-public-ip <YOUR_SERVER_PUBLIC_IP> --no-zmq --detach
 ```
 
 Note, you should replace <YOUR_SERVER_PUBLIC_IP> with your server public ip(eg.:1xx.2xx.3xx.4xx).
@@ -82,7 +82,7 @@ After=network-online.target
 Type=simple
 User=judecoin
 WorkingDirectory=/usr/local/bin
-ExecStart=/usr/local/bin/judecoind --non-interactive --coinfig-file /your/path/judecoind.conf
+ExecStart=/usr/local/bin/judecoind --non-interactive --config-file /your/path/judecoind.conf
 Restart=on-failure
 RestartSec=10s
 LimitNOFILE=50000
@@ -91,10 +91,10 @@ LimitNOFILE=50000
 WantedBy=multi-user.target
 ```
 
-`judeciond.conf` eg.:
+`judecoind.conf` eg.:
 
 ```
-#judeciond.conf
+#judecoind.conf
 
 # Configuration for judecoind
 # Syntax: any command line option may be specified as 'clioptionname=value'.
@@ -112,21 +112,21 @@ service-node-public-ip=YOUR_SERVER_PUBLIC_IP
 #### 2.4.2 Start judecoin-node.service
 
 ```bash
-  sudo cp your/path/judecooin-node.service /etc/systemd/system/judecooin-node.service
-  sudo systemctl daemon-reload
-  sudo systemctl enable judecooin-node.service
-  sudo systemctl start judecooin-node
+sudo cp your/path/judecoin-node.service /etc/systemd/system/judecoin-node.service
+sudo systemctl daemon-reload
+sudo systemctl enable judecoin-node.service
+sudo systemctl start judecoin-node
 
 ```
 
 #### 2.5 Interacting with the running `judecoind`
 
-If you run the `oxend` command with an appended oxend command (note that `sudo` is not required!), the `judecoind` command forwards this instruction to the running `judecoind`. So, for example, to get the current `judecoind` status you can run you would run:
+If you run the `judecoind` command with an appended judecoind command (note that `sudo` is not required!), the `judecoind` command forwards this instruction to the running `judecoind`. So, for example, to get the current `judecoind` status you can run you would run:
 
 ```
 ./judecoind status
 
-./judeocind print_sn_status
+./judecoind print_sn_status
 ```
 
 
@@ -167,7 +167,7 @@ You'll need your wallet address to register your Service Node. Run the `address`
 
 To run a Service Node as the sole contributor, you'll need:
 
-- A fully synchronized, up-to-date Judeocin daemon running on your Service Node
+- A fully synchronized, up-to-date Judecoin daemon running on your Service Node
 - An Judecoin wallet with at least 23600 JUDE in it (to meet the staking requirement to register your Service Node)
 
 
@@ -237,7 +237,7 @@ Next, `judecoind` will request input for your desired operator fee. This value, 
 
 > For example, imagine a Service Node with 4 contributors, including the operator, all staking equal amounts (25%). If the operator specified a 10% fee at this step, they would automatically receive 10% of the Service Node rewards, and the remaining 90% would then be split equally between the operator and the other 3 contributors.
 
-The terminal will now display the minimum reserve the operator can contribute, and request input for the amount (in Oxen) you, as the operator, wish to contribute. Type your desired `<operator contribution>` and click return.
+The terminal will now display the minimum reserve the operator can contribute, and request input for the amount (in Jude) you, as the operator, wish to contribute. Type your desired `<operator contribution>` and click return.
 
 Once you've set your desired stake amount, you'll be prompted to either reserve spots for individuals that have already agreed to stake into the Service Node, or leave the pool open for anyone to contribute.
 
@@ -280,7 +280,7 @@ You have 2 weeks from the moment of registering the Service Node to run the `reg
 Before you disconnect from your VPS, run the following command:
 
 ```
-./judeocin print_sn_key
+./judecoin print_sn_key
 ```
 
 This will output a bunch of information about your Service Node, but there's one part we're interested in at this stage: the long string of random letters and numbers after the characters `SN:` . This string is your Service Node's public key, used to identify your Service Node on the list of registered and operational Service Nodes. Select and copy the public key (do not copy any of the surrounding information).
@@ -295,13 +295,13 @@ Once this command completes, your staking transaction will be sent to be include
 
 You can also check your node's status by looking for your `<Service Node Public Key>` in the "Service Nodes Awaiting Contributions" section on [the Judecoin block explorer](https://www.judeblock.org/).
 
-Once the Service Node registration is received, you can send the `<Service Node Public Key>` to your contributors, along with the amount of $OXEN they are required to stake.
+Once the Service Node registration is received, you can send the `<Service Node Public Key>` to your contributors, along with the amount of $JUDE they are required to stake.
 
 At this point, you'll need to wait until all contributors have staked before the Service Node activates and becomes eligible to begin receiving rewards.
 
 #### Staking to a shared node as a contributor
 
-For a guide on staking to a shared Oxen Service Node as a contributor, come soon.
+For a guide on staking to a shared Judecoin Service Node as a contributor, come soon.
 
 #### Step 4: Service Node status check
 
