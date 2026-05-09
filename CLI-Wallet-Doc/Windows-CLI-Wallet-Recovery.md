@@ -1,14 +1,12 @@
-# Windows CLI Wallet Recovery Guide
+# Judecoin CLI Wallet Recovery Guide (Windows)
 
-## 【Description】
+## Description
 
 This guide describes how to restore an existing Judecoin CLI wallet on Windows using the original 25-word seed phrase.
 
 This guide is intended to help Judecoin users recover access to an existing wallet safely through the Windows CLI wallet recovery process.
 
-## 【Windows CLI Wallet Recovery Process】
-
-## 【1. Download the CLI Wallet and Start Node Synchronization】
+## Step 1. Download the CLI Wallet and Start Node Synchronization
 
 Go to the official Judecoin website to download the CLI wallet:
 
@@ -34,15 +32,15 @@ Then open the extracted folder, right-click in an empty area, and select:
 
 This will open the command terminal for wallet operations.
 
-## 【2. Restore the CLI Wallet】
+## Step 2. Restore the CLI Wallet
 
 In the terminal, run the following command:
 
-`./judecoin-wallet-cli.exe --restore-deterministic-wallet --use-english-language-names`
+`.\judecoin-wallet-cli.exe --restore-deterministic-wallet --use-english-language-names`
 
 Then press Enter.
 
-## 【3. Enter Wallet Name】
+## Step 3. Enter Wallet Name
 
 The system will ask you to enter a wallet name.
 
@@ -52,7 +50,7 @@ For example:
 
 Then press Enter.
 
-## 【4. Enter the 25-word Seed Phrase】
+## Step 4. Enter the 25-word Seed Phrase
 
 The system will show:
 
@@ -70,7 +68,7 @@ Important notes:
 - Do not record the screen;
 - Do not send the seed phrase through chat apps or email.
 
-## 【5. Seed Offset Passphrase】
+## Step 5. Seed Offset Passphrase
 
 The screen may show:
 
@@ -82,7 +80,7 @@ Most users do not have this extra passphrase.
 
 If you did not set one before, simply press Enter and leave it empty.
 
-## 【6. Set a New Wallet Password】
+## Step 6. Set a New Wallet Password
 
 The system will ask you to create a new password for the restored wallet.
 
@@ -96,13 +94,13 @@ Important notes:
 - Use a strong password that you can remember;
 - Do not store the wallet password together with the seed phrase.
 
-## 【7. Verify the Wallet Address】
+## Step 7. Verify the Wallet Address
 
 After the wallet is restored, the system will show the restored wallet address.
 
 It is recommended to verify whether the address matches your original wallet address.
 
-## 【8. Whether to Display the Wallet Seed】
+## Step 8. Whether to Display the Wallet Seed
 
 The system may ask whether you want to display the wallet seed.
 
@@ -112,7 +110,7 @@ For safety, it is recommended to enter:
 
 Then press Enter.
 
-## 【9. Restore from Blockchain Height】
+## Step 9. Restore from Blockchain Height
 
 The system may show:
 
@@ -124,7 +122,7 @@ If you are not sure, simply press Enter and use the default value `0`.
 
 This may take longer, but it is safer because the wallet will scan from the beginning.
 
-## 【10. Wait for Wallet Refresh and Balance Recovery】
+## Step 10. Wait for Wallet Refresh and Balance Recovery
 
 The wallet will start scanning and synchronizing with the blockchain.
 
@@ -138,14 +136,24 @@ To check wallet balance, run:
 
 After synchronization is completed, the wallet will show available balance and locked balance.
 
-## 【Security Reminders】
+## Step 11. Exit the Wallet Safely
+
+When closing the CLI wallet, use:
+
+`exit`
+
+This helps save the current wallet session state properly.
+
+Do not close the terminal directly if the wallet is still refreshing or writing data.
+
+## Security Reminders
 
 Please pay attention to the following security rules:
 
 - Do not share the 25-word seed phrase with anyone;
 - Do not share your wallet password;
 - Do not share wallet files;
-- Do not share view keys or spend keys;
+- Do not share private view keys or private spend keys;
 - Do not take screenshots of your seed phrase;
 - Do not store the seed phrase in a normal document on an online computer;
 - Do not download wallets from unknown links;
@@ -154,7 +162,7 @@ Please pay attention to the following security rules:
 - Use encrypted storage for important backups;
 - Keep at least two offline backups in separate safe locations.
 
-## 【Conclusion】
+## Conclusion
 
 This guide provides a Windows CLI wallet recovery process for restoring an existing Judecoin wallet using the original 25-word seed phrase.
 
