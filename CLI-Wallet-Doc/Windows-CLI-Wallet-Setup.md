@@ -1,11 +1,11 @@
-# CLI Wallet setup (Windows)
-This guide covers installing and configuring the Jude CLI (Command Line Interface) Wallet on Windows.
+# Judecoin CLI Wallet Setup Guide (Windows)
+This guide covers installing and configuring the Judecoin CLI (Command Line Interface) Wallet on Windows.
 
 If you are new to console or terminal commands and/or would prefer a wallet with buttons and JUDE branding, we suggest you download the [GUI Wallet](https://www.judecoin.io/downloads).
 
 Before following the guide below, you'll need to download the CLI Wallet for Windows. 
 
-# Step 1: Opening judecoin-wallet-cli and judecoind.
+## Step 1: Opening judecoin-wallet-cli and judecoind.
 
 To use the judecoin-wallet-cli we must first have the daemon, judecoind, up and running. The judecoind is your node which the judecoin-wallet-cli broadcasts through. Without the node running the judecoin-wallet-cli will not be able to operate.
 
@@ -26,12 +26,13 @@ Use the "help" command to see the list of available commands.
 Now the daemon is synced we can run the judecoin-wallet-cli file.
 
 
-# Step 2: Setting up your judecoin-wallet-cli account.
+## Step 2: Setting up your judecoin-wallet-cli account.
 
 If this is your first time opening the judecoin-wallet-cli it will request for you to specify a wallet name. For the purposes of this user guide we will use the example name MyWallet. 
 ```
-run command:  .\judecoin-wallet-cli.exe  --use-english-language-names
-```
+Run the following command:
+
+.\judecoin-wallet-cli.exe --use-english-language-names 
 ```
 Specify wallet file name (e.g., MyWallet). If the wallet doesn't exist, it will be created.
 
@@ -150,7 +151,7 @@ Tag: (No tag assigned)
 
 Balance: 0.000000000, unlocked balance: 0.000000000
 
-Background refresh thread started”
+Background refresh thread started
 ```
 
 
