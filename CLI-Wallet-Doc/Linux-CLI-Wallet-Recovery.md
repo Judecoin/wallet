@@ -1,14 +1,13 @@
-# Linux-Ubuntu CLI Wallet Recovery Guide
+# Judecoin CLI Wallet Recovery Guide (Linux-Ubuntu)
 
-## 【Description】
+## Description
 
 This guide describes how to restore an existing Judecoin CLI wallet on Linux-Ubuntu using the original 25-word seed phrase.
 
 This guide is intended to help Judecoin users recover access to an existing wallet safely through the Linux-Ubuntu CLI wallet recovery process.
 
-## 【Linux-Ubuntu CLI Wallet Recovery Process】
 
-## 【1. Download the CLI Wallet and Start Node Synchronization】
+## Step 1. Download the CLI Wallet and Start Node Synchronization
 
 Go to the official Judecoin website to download the CLI wallet:
 
@@ -42,7 +41,7 @@ Important:
 
 Do not close the `judecoind` terminal window while using the wallet. You can keep it running in the background or open another terminal window for wallet operations.
 
-## 【2. Open Another Terminal Window】
+## Step 2. Open Another Terminal Window
 
 Open a new terminal window or SSH session.
 
@@ -50,7 +49,7 @@ Enter the same Judecoin CLI directory:
 
 `cd judecoin-x86_64-linux-gnu-v3.1.2`
 
-## 【3. Restore the CLI Wallet】
+## Step 3. Restore the CLI Wallet
 
 In the terminal, run the following command:
 
@@ -58,7 +57,7 @@ In the terminal, run the following command:
 
 Then press Enter.
 
-## 【4. Enter Wallet Name】
+## Step 4. Enter Wallet Name
 
 The system will ask you to enter a wallet name.
 
@@ -70,7 +69,7 @@ Then press Enter.
 
 If a wallet file with the same name already exists in the current directory, choose a different wallet name or make sure you are not overwriting an existing wallet file by mistake.
 
-## 【5. Enter the 25-word Seed Phrase】
+## Step 5. Enter the 25-word Seed Phrase
 
 The system will show:
 
@@ -89,7 +88,7 @@ Important notes:
 - Do not record the screen;
 - Do not send the seed phrase through chat apps or email.
 
-## 【6. Seed Offset Passphrase】
+## Step 6. Seed Offset Passphrase
 
 The screen may show:
 
@@ -101,7 +100,7 @@ Most users do not have this extra passphrase.
 
 If you did not set one before, simply press Enter and leave it empty.
 
-## 【7. Set a New Wallet Password】
+## Step 7. Set a New Wallet Password
 
 The system will ask you to create a new password for the restored wallet.
 
@@ -115,7 +114,7 @@ Important notes:
 - Use a strong password that you can remember;
 - Do not store the wallet password together with the seed phrase.
 
-## 【8. Verify the Wallet Address】
+## Step 8. Verify the Wallet Address
 
 After the wallet is restored, the system will show the restored wallet address.
 
@@ -123,7 +122,7 @@ It is recommended to verify whether the address matches your original wallet add
 
 If the address does not match the expected wallet address, stop and check whether the seed phrase, word order, language option, or seed offset passphrase is correct.
 
-## 【9. Whether to Display the Wallet Seed】
+## Step 9. Whether to Display the Wallet Seed
 
 The system may ask whether you want to display the wallet seed.
 
@@ -133,7 +132,7 @@ For safety, it is recommended to enter:
 
 Then press Enter.
 
-## 【10. Restore from Blockchain Height】
+## Step 10. Restore from Blockchain Height
 
 The system may show:
 
@@ -145,7 +144,7 @@ If you are not sure, simply press Enter and use the default value `0`.
 
 This may take longer, but it is safer because the wallet will scan from the beginning.
 
-## 【11. Wait for Wallet Refresh and Balance Recovery】
+## Step 11. Wait for Wallet Refresh and Balance Recovery
 
 The wallet will start scanning and synchronizing with the blockchain.
 
@@ -159,7 +158,7 @@ To check wallet balance, run:
 
 After synchronization is completed, the wallet will show available balance and locked balance.
 
-## 【12. Exit the Wallet Safely】
+## Step 12. Exit the Wallet Safely
 
 When closing the CLI wallet, use:
 
@@ -169,7 +168,7 @@ This helps save the current wallet session state properly.
 
 Do not close the terminal directly if the wallet is still refreshing or writing data.
 
-## 【Common Notes】
+## Common Notes
 
 1. The daemon `judecoind` should be running and synchronized before wallet recovery or wallet refresh.
 
@@ -181,7 +180,7 @@ Windows example:
 
 Linux-Ubuntu example:
 
-`./judecoin-wallet-cli`
+`.\judecoin-wallet-cli`
 
 3. If the wallet restore process takes a long time, it may be scanning from an early blockchain height.
 
@@ -197,7 +196,7 @@ Then check:
 
 6. Always download the CLI wallet from the official Judecoin website or official GitHub source.
 
-## 【Security Reminders】
+## Security Reminders
 
 Please pay attention to the following security rules:
 
@@ -215,7 +214,7 @@ Please pay attention to the following security rules:
 - Use encrypted storage for important backups;
 - Keep at least two offline backups in separate safe locations.
 
-## 【Conclusion】
+## Conclusion
 
 This guide provides a Linux-Ubuntu CLI wallet recovery process for restoring an existing Judecoin wallet using the original 25-word seed phrase.
 
