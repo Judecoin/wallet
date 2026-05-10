@@ -22,7 +22,7 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
 
 <br />
 
-<a href="https://www.judecoin.io/storage/files/android/judecoin-alpha-v1.5.6.apk">
+<a href="https://www.judecoin.io/storage/files/android/judecoin-alpha-v1.5.7.apk">
     <img src="https://github.com/Judecoin/wallet/assets/79756583/3dd5caf6-dd88-4d33-9c4f-d51099b68705" width="160px" height="68px" />
 </a>
 
@@ -51,9 +51,9 @@ Highlights include:
     - [BinanceCoin](https://www.bnbchain.org/)
     - [Polkadot](https://polkadot.network/)
     - [TRON](https://tronscan.org/)
-- All private keys and seeds stay on device and are never shared.
-- Easy backup and restore feature to save all the information that's important to you.
+- All private keys and seeds stay on device and are never shared
+- Easy backup and restore feature to save all the information that's important to you
 - Custom address book
 - Favorite wallets with fast syncing
-- Custom Nodes.
+- Custom Nodes
 
