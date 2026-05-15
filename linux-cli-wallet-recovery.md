@@ -6,7 +6,6 @@ This guide describes how to restore an existing Judecoin CLI wallet on Linux-Ubu
 
 This guide is intended to help Judecoin users recover access to an existing wallet safely through the Linux-Ubuntu CLI wallet recovery process.
 
-
 ## Step 1. Download the CLI Wallet and Start Node Synchronization
 
 Go to the official Judecoin website to download the CLI wallet:
@@ -174,13 +173,9 @@ Do not close the terminal directly if the wallet is still refreshing or writing 
 
 2. The Linux wallet command does not use `.exe`.
 
-Windows example:
-
-`./judecoin-wallet-cli.exe`
-
 Linux-Ubuntu example:
 
-`.\judecoin-wallet-cli`
+`./judecoin-wallet-cli`
 
 3. If the wallet restore process takes a long time, it may be scanning from an early blockchain height.
 

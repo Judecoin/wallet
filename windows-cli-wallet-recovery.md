@@ -18,7 +18,9 @@ After downloading, extract the compressed wallet package to your local computer.
 
 Open the extracted folder and double-click:
 
-`judecoind`
+`judecoind.exe`
+
+On some Windows systems, file extensions are hidden by default, so this file may appear as `judecoind`.
 
 This will start the daemon and begin blockchain synchronization.
 
@@ -61,6 +63,7 @@ Enter your 25-word seed phrase here.
 Important notes:
 
 - Add one space between each word;
+- Enter all 25 words in the correct order;
 - Press Enter after entering all 25 words;
 - The terminal usually does not display the seed phrase while you are typing. This is normal;
 - Make sure your environment is safe and no one can see your seed phrase;
