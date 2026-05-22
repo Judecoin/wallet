@@ -20,7 +20,7 @@ If you are using the CLI package directly on Linux, enter the extracted CLI dire
 
 Example:
 
-`cd judecoin-x86_64-linux-gnu-v3.1.2`
+`cd judecoin-x86_64-linux-gnu-v3.2.0`
 
 Start the daemon:
 
@@ -46,7 +46,7 @@ Open a new terminal window or SSH session.
 
 Enter the same Judecoin CLI directory:
 
-`cd judecoin-x86_64-linux-gnu-v3.1.2`
+`cd judecoin-x86_64-linux-gnu-v3.2.0`
 
 ## Step 3. Restore the CLI Wallet
 

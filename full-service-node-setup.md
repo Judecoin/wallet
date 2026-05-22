@@ -31,11 +31,11 @@ If you are using a firewall, ensure that the following ports are open/reachable:
 #### 2.1 Install Judecoin released binaries
 
 ```
-wget https://www.judecoin.io/storage/files/cli/judecoin-linux-x64-v3.1.2.tar.bz2
+wget https://www.judecoin.io/storage/files/cli/judecoin-linux-x64-v3.2.0.tar.bz2
 
-tar -jxvf judecoin-linux-x64-v3.1.2.tar.bz2
+tar -jxvf judecoin-linux-x64-v3.2.0.tar.bz2
 
-cd judecoin-x86_64-linux-gnu-v3.1.2
+cd judecoin-x86_64-linux-gnu-v3.2.0
 ```
 
 ##### Check version information
@@ -180,7 +180,7 @@ register_service_node 10949992 JBAo6emU36qSJU12Mdp6Pc1ioAFyRUiHbDDqbuoPRgSn6z6tn
 
 > *NOTE: You must run the command which* ***your*** *daemon outputs, and* ***not*** *the command shown above.*
 
-#### 3.1.2: Registering your Service Node
+#### 3.2.0: Registering your Service Node
 
 To stake and register your Service Node, open your Judecoin CLI wallet with a balance of at least 23600 $JUDE. Simply paste the `register_service_node` command from Step 3.1.1 above into the CLI wallet prompt and press Enter.
 
