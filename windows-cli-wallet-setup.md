@@ -2,7 +2,7 @@
 
 This guide covers installing and configuring the Judecoin CLI (Command Line Interface) Wallet on Windows.
 
-If you are new to console or terminal commands and/or would prefer a wallet with buttons and JUDE branding, we suggest you download the [GUI Wallet](https://www.judecoin.io/downloads).
+If you are new to console or terminal commands and/or would prefer a wallet with buttons and JUDE branding, we suggest you download the [GUI Wallet](https://www.judecoin.info/downloads).
 
 Before following the guide below, you'll need to download the CLI Wallet for Windows.
 
