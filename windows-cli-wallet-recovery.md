@@ -10,7 +10,7 @@ This guide is intended to help Judecoin users recover access to an existing wall
 
 Go to the official Judecoin website to download the CLI wallet:
 
-https://www.judecoin.io
+https://www.judecoin.info
 
 Please make sure to download the wallet only from the official website. Do not use unknown links or third-party sources.
 
