@@ -8,11 +8,11 @@ This guide is intended to help Judecoin users recover access to an existing wall
 
 ## Step 1. Download the CLI Wallet and Start Node Synchronization
 
-Go to the official Judecoin website to download the CLI wallet:
+Go to the community Judecoin website to download the CLI wallet:
 
 https://www.judecoin.info
 
-Please make sure to download the wallet only from the official website. Do not use unknown links or third-party sources.
+Please make sure to download the wallet only from the community website. Do not use unknown links or third-party sources.
 
 After downloading, extract the compressed wallet package to your Linux server or local Linux machine.
 
@@ -204,7 +204,7 @@ Please pay attention to the following security rules:
 - Do not upload the seed phrase to public cloud storage;
 - Do not paste the seed phrase into unknown websites or tools;
 - Do not download wallets from unknown links;
-- Always download the CLI wallet from the official website or official GitHub source;
+- Always download the CLI wallet from the community website or GitHub source;
 - Keep the seed phrase offline;
 - Use encrypted storage for important backups;
 - Keep at least two offline backups in separate safe locations.
