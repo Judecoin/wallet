@@ -1,0 +1,538 @@
+/* ============================================================================
+ * Judecoin Wallet - theme.qss (st-030)
+ *
+ * Single source of truth for the Forest Green visual contract.
+ *   - Loaded via QQuickStyle.setStyle("Fusion") at startup.
+ *   - qrc-referenced as qrc:/qml/theme.qss (registered in src/CMakeLists.txt).
+ *   - Applied to all QtWidgets-styleable controls (native dialogs, file pickers,
+ *     ConfirmModal password fields if they fall back to native line edits, etc.).
+ *   - QtQuick.Controls use these same tokens via Theme.qml singleton (planned
+ *     in st-041 Sidebar follow-up; until then QML components read the matching
+ *     literal hex from the design_specs.md table).
+ *
+ * V5.4.15 single theme: 1 color set, this single file, no theme switch.
+ * V5.4.7  secrets:      no key/seed/password stored in any property of this file.
+ * V5.4.9  i18n:         user-visible strings belong in QML qsTr(); theme.qss
+ *                       has no translatable labels.
+ * V5.4.21 network:      mainnet-only visual tokens; no regtest/testnet/stagenet
+ *                       color set lives here.
+ *
+ * If you change a value below, mirror the change in:
+ *   - docs/release/design_specs.md   (canonical color/spacing/font table)
+ *   - docs/image/ui-mockup-forest-green.jpg  (visual reference)
+ *   - docs/image/mockup-desktop-forest-green.html  (CSS source of the mockup)
+ * ============================================================================ */
+
+
+/* ---------------------------------------------------------------------------
+ * Color tokens (Forest Green palette, V5.4.15)
+ * Names below are the canonical keys. The QSS body uses the literal hex so the
+ * QSS parser does not need a preprocessor. The mapping table at the top is the
+ * documentation - keep the names and hex in sync with design_specs.md.
+ * ---------------------------------------------------------------------------
+
+   Key             | Hex       | Role (see design_specs.md §2)
+   ----------------+-----------+----------------------------------------------
+   --bg            | #f0fdf4   | Window / page background (lightest mint)
+   --fg            | #14532d   | Primary foreground (deep forest text)
+   --muted         | #6b8074   | Muted text (status lines, helper text)
+   --line          | #4d7c5c   | Subtle border / divider stroke
+   --neutral       | #d1fae5   | Neutral surface (secondary buttons, inputs)
+   --input         | #86efac   | Input field highlight (focus / selection)
+   --process       | #4ade80   | In-progress accent (sync spinner, progress)
+   --storage       | #16a34a   | Storage/storage-state accent
+   --external      | #166534   | External / "external" heading color
+   --risk          | #fca5a5   | Risk / error highlight (light coral, NOT red)
+   --accent        | #22c55e   | Primary accent (CTA, selected dot)
+   --accent-dk     | #15803d   | Sidebar gradient start
+   --accent-mid    | #16a34a   | Sidebar gradient end / balance card start
+   --accent-light  | #4ade80   | Hover state / balance card end
+   --bg-deep       | #dcfce7   | Title bar / gradient end for body bg
+   --shadow-card   | rgba(22,163,74,0.25)  Balance card drop shadow
+   --shadow-card-h | rgba(20,83,45,0.18)   Window drop shadow
+   --border-card   | #bbf7d0   | Card border / soft divider
+   --status-dot    | #16a34a   | Status dot fill (with #16a34a glow)
+   --tx-in         | #16a34a   | Incoming tx amount color (positive)
+   --tx-out        | #c2410c   | Outgoing tx amount color (dark orange)
+   --tx-icon-in    | #16a34a   | Incoming tx avatar background
+   --tx-icon-out   | #ea580c   | Outgoing tx avatar background
+
+*/
+
+
+/* ---------------------------------------------------------------------------
+ * QPalette - drives QtWidgets-derived controls (Fusion style).
+ * --------------------------------------------------------------------------- */
+* {
+    /* Fusion falls back to QPalette for many widget properties; this palette
+       mirrors the Forest Green token table so any native control that slips
+       through the QML layer inherits the theme. */
+}
+
+/* Base application surface */
+QWidget {
+    background-color: #f0fdf4;
+    color: #14532d;
+    selection-background-color: #86efac;
+    selection-color: #14532d;
+    font-family: "Inter", "Segoe UI", "Noto Sans", sans-serif;
+    font-size: 13px;
+}
+
+/* Main window frame (uses the deep mint gradient) */
+QMainWindow,
+QDialog#BackgroundDialog {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #f0fdf4, stop:1 #dcfce7);
+}
+
+/* Title bar - light gradient + soft divider */
+QFrame#TitleBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #ecfdf5, stop:1 #d1fae5);
+    border-bottom: 1px solid #86efac;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Sidebar - 180px wide, vertical gradient (#15803d -> #16a34a), selected
+ * nav item gets a 3px left accent border + semi-transparent highlight.
+ * --------------------------------------------------------------------------- */
+QFrame#Sidebar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #15803d, stop:1 #16a34a);
+    color: #ffffff;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+QFrame#Sidebar QLabel#SidebarLogoText {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+QFrame#Sidebar QLabel#SidebarLogoSub {
+    color: #bbf7d0;
+    font-size: 10px;
+}
+
+QFrame#Sidebar QPushButton#NavItem {
+    background: transparent;
+    color: #bbf7d0;
+    border: none;
+    border-left: 3px solid transparent;
+    padding: 11px 20px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 400;
+    min-height: 38px;
+}
+
+QFrame#Sidebar QPushButton#NavItem:hover {
+    background: rgba(187, 247, 208, 0.10);
+    color: #ffffff;
+}
+
+QFrame#Sidebar QPushButton#NavItem:checked,
+QFrame#Sidebar QPushButton#NavItem[selected="true"] {
+    background: rgba(187, 247, 208, 0.18);
+    border-left: 3px solid #22c55e;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Balance card - 10px radius, 20-24px padding, gradient
+ * (#16a34a -> #22c55e), 0 8px 24px rgba(22,163,74,0.25) shadow.
+ * --------------------------------------------------------------------------- */
+QFrame#BalanceCard {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #16a34a, stop:1 #22c55e);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    /* Drop shadow approximation via 2 stacked frames in QML; for native
+       QFrame we layer a QGraphicsDropShadowEffect in QML wrappers. */
+}
+
+QLabel#BalanceLabel {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+}
+
+QLabel#BalanceAmount {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+QLabel#BalanceUsd {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Buttons - 8px radius, 12-16px padding. Primary = accent bg + dark green
+ * text. Secondary = neutral bg + external text.
+ * --------------------------------------------------------------------------- */
+QPushButton {
+    background: #d1fae5;
+    color: #166534;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 36px;
+}
+
+QPushButton:hover {
+    background: #bbf7d0;
+}
+
+QPushButton:pressed {
+    background: #86efac;
+}
+
+QPushButton:disabled {
+    background: #ecfdf5;
+    color: #6b8074;
+}
+
+QPushButton#PrimaryButton,
+QPushButton[role="primary"] {
+    background: #22c55e;
+    color: #052e16;
+}
+
+QPushButton#PrimaryButton:hover,
+QPushButton[role="primary"]:hover {
+    background: #4ade80;
+}
+
+QPushButton#SecondaryButton,
+QPushButton[role="secondary"] {
+    background: #d1fae5;
+    color: #166534;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Inputs - 8px radius, focus ring is the input token (#86efac).
+ * --------------------------------------------------------------------------- */
+QLineEdit,
+QTextEdit,
+QPlainTextEdit,
+QSpinBox,
+QDoubleSpinBox,
+QComboBox {
+    background: #ffffff;
+    color: #14532d;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    selection-background-color: #86efac;
+    selection-color: #14532d;
+}
+
+QLineEdit:focus,
+QTextEdit:focus,
+QPlainTextEdit:focus,
+QSpinBox:focus,
+QDoubleSpinBox:focus,
+QComboBox:focus {
+    border: 1px solid #22c55e;
+    background: #f0fdf4;
+}
+
+QLineEdit:disabled {
+    background: #ecfdf5;
+    color: #6b8074;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Transaction row - 32x32 circular avatar, 10px gap, 1px divider.
+ * --------------------------------------------------------------------------- */
+QFrame#TxRow {
+    background: transparent;
+    border-bottom: 1px solid #dcfce7;
+    padding: 10px 12px;
+}
+
+QFrame#TxRow:last-child {
+    border-bottom: none;
+}
+
+QLabel#TxAvatar {
+    background: #16a34a;
+    color: #ffffff;
+    border-radius: 16px;
+    min-width: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    font-size: 12px;
+    font-weight: 700;
+    qproperty-alignment: AlignCenter;
+}
+
+QLabel#TxAvatar[role="out"] {
+    background: #ea580c;
+}
+
+QLabel#TxAmount {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QLabel#TxAmount[role="in"] {
+    color: #15803d;
+}
+
+QLabel#TxAmount[role="out"] {
+    color: #c2410c;
+}
+
+QLabel#TxStatus {
+    color: #6b8074;
+    font-size: 11px;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Status pill + status dot
+ * --------------------------------------------------------------------------- */
+QFrame#StatusPill {
+    background: #dcfce7;
+    border-radius: 12px;
+    padding: 4px 10px;
+}
+
+QLabel#StatusPillText {
+    color: #14532d;
+    font-size: 12px;
+}
+
+QLabel#StatusDot {
+    background: #16a34a;
+    border-radius: 4px;
+    min-width: 8px;
+    max-width: 8px;
+    min-height: 8px;
+    max-height: 8px;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Section heading (used for "Recent Transactions", etc.)
+ * --------------------------------------------------------------------------- */
+QLabel#SectionTitle {
+    color: #166534;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+QLabel#PageTitle {
+    color: #166534;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Modal / dialog
+ * --------------------------------------------------------------------------- */
+QDialog {
+    background: #ffffff;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+}
+
+QDialog QLabel#DialogTitle {
+    color: #14532d;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+QDialog QLabel#DialogBody {
+    color: #14532d;
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Scrollbar - thin, theme-tinted
+ * --------------------------------------------------------------------------- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #86efac;
+    border-radius: 4px;
+    min-height: 24px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #22c55e;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: #86efac;
+    border-radius: 4px;
+    min-width: 24px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #22c55e;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Tooltip
+ * --------------------------------------------------------------------------- */
+QToolTip {
+    background: #14532d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Tab bars (used in HistoryPage sub-tabs)
+ * --------------------------------------------------------------------------- */
+QTabWidget::pane {
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    top: -1px;
+    background: #ffffff;
+}
+
+QTabBar::tab {
+    background: transparent;
+    color: #166534;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 13px;
+    min-width: 96px;
+}
+
+QTabBar::tab:hover {
+    background: #dcfce7;
+}
+
+QTabBar::tab:selected {
+    background: #ffffff;
+    border-color: #bbf7d0;
+    color: #14532d;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Checkbox / radio (ConfirmModal "I have written it down" etc.)
+ * --------------------------------------------------------------------------- */
+QCheckBox,
+QRadioButton {
+    color: #14532d;
+    font-size: 13px;
+    spacing: 8px;
+}
+
+QCheckBox::indicator,
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #4d7c5c;
+    background: #ffffff;
+}
+
+QCheckBox::indicator {
+    border-radius: 4px;
+}
+
+QRadioButton::indicator {
+    border-radius: 8px;
+}
+
+QCheckBox::indicator:checked {
+    background: #22c55e;
+    border: 1px solid #15803d;
+}
+
+QRadioButton::indicator:checked {
+    background: #22c55e;
+    border: 4px solid #bbf7d0;  /* outer ring stays light */
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Progress (seed-word confirmation progress, recovery scan progress)
+ * --------------------------------------------------------------------------- */
+QProgressBar {
+    background: #ecfdf5;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    text-align: center;
+    color: #14532d;
+    font-size: 12px;
+    min-height: 16px;
+}
+
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #16a34a, stop:1 #22c55e);
+    border-radius: 8px;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * Menu / context menu
+ * --------------------------------------------------------------------------- */
+QMenu {
+    background: #ffffff;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 4px 0;
+}
+
+QMenu::item {
+    color: #14532d;
+    padding: 6px 24px 6px 16px;
+    font-size: 13px;
+}
+
+QMenu::item:selected {
+    background: #dcfce7;
+    color: #14532d;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #bbf7d0;
+    margin: 4px 0;
+}
+
+
+/* ---------------------------------------------------------------------------
+ * End of theme.qss (Forest Green, V5.4.15)
+ * Keep this file in sync with docs/release/design_specs.md.
+ * ============================================================================ */
