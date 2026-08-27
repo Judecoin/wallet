@@ -2,7 +2,7 @@
 
 This guide covers installing and configuring the Judecoin CLI (Command Line Interface) wallet on Linux-Ubuntu.
 
-If you are new to console or terminal commands and/or would prefer a wallet with buttons and JUDE branding, we suggest that you download the [GUI Wallet](https://www.judecoin.info/downloads).
+If you are new to console or terminal commands and/or would prefer a wallet with buttons and JUDE branding, we suggest that you download the [GUI Wallet](https://github.com/Judecoin/wallet/releases/tag/v3.2.0).
 
 Before following the guide below, you will need to download and extract the CLI Wallet for Linux.
 
