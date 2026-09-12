@@ -22,7 +22,7 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
 
 <br />
 
-<a href="https://github.com/Judecoin/wallet/releases/download/PalmWallet-Android-v1.5.9/PalmWallet-release-v1.5.9.apk">
+<a href="https://github.com/Judecoin/wallet/releases/download/PalmWallet-Android-v1.6.0/PalmWallet-release-v1.6.0.apk">
     <img src="https://github.com/Judecoin/wallet/assets/79756583/3dd5caf6-dd88-4d33-9c4f-d51099b68705" width="160px" height="68px" />
 </a>
 
