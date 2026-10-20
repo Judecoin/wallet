@@ -31,11 +31,11 @@ If you are using a firewall, ensure that the following ports are open/reachable:
 #### 2.1 Install Judecoin released binaries
 
 ```
-wget https://github.com/Judecoin/judecoin/releases/download/v3.2.0/judecoin-linux-x64-v3.2.0.tar.bz2
+wget https://github.com/Judecoin/judecoin/releases/download/v4.0.0/judecoin-linux-x64-v4.0.0.tar.bz2
 
-tar -jxvf judecoin-linux-x64-v3.2.0.tar.bz2
+tar -jxvf judecoin-linux-x64-v4.0.0.tar.bz2
 
-cd judecoin-x86_64-linux-gnu-v3.2.0
+cd judecoin-x86_64-linux-gnu-v4.0.0
 ```
 
 ##### Check version information
