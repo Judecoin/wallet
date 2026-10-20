@@ -160,7 +160,7 @@ Please pay attention to the following security rules:
 - Do not take screenshots of your seed phrase;
 - Do not store the seed phrase in a normal document on an online computer;
 - Do not download wallets from unknown links;
-- Always download the CLI wallet from the community website or GiHub source;
+- Always download the CLI wallet from the community website or GitHub source;
 - Keep the seed phrase offline;
 - Use encrypted storage for important backups;
 - Keep at least two offline backups in separate safe locations.
