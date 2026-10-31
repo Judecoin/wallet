@@ -11,12 +11,12 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
 
 <br />
 
-<a href="https://github.com/Judecoin/judecoin-gui-wallet/releases/download/v4.0.2/Jude-Wallet-GUI-4.0.2-Linux-x64.zip">
+<a href="https://github.com/Judecoin/judecoin-gui-wallet/releases/download/v4.1.0/Jude-Wallet-GUI-4.1.0-Linux-x64.zip">
     <img src="https://github.com/Judecoin/wallet/assets/79756583/d0de011e-544c-414b-ad26-032071273238" width="160px" height="68px" />
 </a>
 
 
-<a href="https://github.com/Judecoin/judecoin-gui-wallet/releases/download/v4.0.2/Jude-Wallet-GUI-4.0.2-Windows-x64.zip">
+<a href="https://github.com/Judecoin/judecoin-gui-wallet/releases/download/v4.1.0/Jude-Wallet-GUI-4.1.0-Windows-x64.zip">
     <img src="https://github.com/Judecoin/wallet/assets/79756583/be063928-d97d-44b5-a3fe-3d1440b0a867" width="160px" height="68px" />
 </a>
 
@@ -26,9 +26,6 @@ Judecoin Wallet is a fully open source cryptocurrency wallet. With an easy to us
     <img src="https://github.com/Judecoin/wallet/assets/79756583/3dd5caf6-dd88-4d33-9c4f-d51099b68705" width="160px" height="68px" />
 </a>
 
-<a href="https://play.google.com/store/apps/details?id=com.judecoin.app&pli=1">
-    <img src="https://github.com/user-attachments/assets/f30c7436-6929-4840-9503-dda99c431093" width="160px" height="68px" />
-</a>
 
 <a href="https://testflight.apple.com/join/4Cqg8Ihk" alt="iOS v1.7.1">
     <img src="https://github.com/user-attachments/assets/0ef48856-ea70-41ba-a3e6-69dc16aaf253" width="160px" height="68px" />
